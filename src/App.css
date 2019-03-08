@@ -249,6 +249,13 @@
   .professional-tag {
     font-size: 2em;
   }
+  .carousel {
+    display: none;
+  }
+  .service-img-col {
+    height: auto;
+    width: 100%;
+  }
 }
 @media (max-width: 375px) {
   body {

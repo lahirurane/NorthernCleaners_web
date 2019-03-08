@@ -52,18 +52,18 @@ export default class Services extends Component {
             >
               {services.map(item => {
                 return (
-                  <div className="col-md-offset-1 col-md-10 ">
-                    <div className="row services-content-row item-center ">
-                      <div className="col-md-6">
-                        <div className="row">
+                  <div className="col-md-offset-1 col-md-10 col-xs-12 ">
+                    <div className="row services-content-row">
+                      <div className="col-md-6 col-xs-12 ">
+                        <div className="row  item-center ">
                           <div className="service-title">{item.title}</div>
                         </div>
-                        <div className="row">
+                        <div className="row  item-center ">
                           <div className="service-desc">{item.desc}</div>
                         </div>
                       </div>
-                      <div className="col-md-6 service-img-col">
-                        <img className="service-img" src={item.img} />
+                      <div className="col-md-6 col-xs-12 service-img-col ">
+                        <img className="service-img " src={item.img} />
                       </div>
                     </div>
                   </div>

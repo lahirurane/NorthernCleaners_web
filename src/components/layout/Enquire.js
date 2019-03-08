@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-var API_KEY = 'acb0b40c-43ca387b';
-var DOMAIN = 'http://northerncleaners.com.au/';
-var mailgun = require('mailgun-js')({ apiKey: API_KEY, domain: DOMAIN });
+// var API_KEY = 'acb0b40c-43ca387b';
+// var DOMAIN = 'http://northerncleaners.com.au/';
+// var mailgun = require('mailgun-js')({ apiKey: API_KEY, domain: DOMAIN });
 
 export default class Enquire extends Component {
   constructor(props) {
@@ -56,16 +56,16 @@ export default class Enquire extends Component {
   }
 
   sendEmail(text) {
-    const data = {
-      from: 'Excited User <me@samples.mailgun.org>',
-      to: 'lahirurandika.ranasinghe@gmail.com',
-      subject: 'new Enquire',
-      text: text
-    };
-
-    mailgun.messages().send(data, (error, body) => {
-      console.log(body);
-    });
+    console.log(text);
+    // const data = {
+    //   from: 'Excited User <me@samples.mailgun.org>',
+    //   to: 'lahirurandika.ranasinghe@gmail.com',
+    //   subject: 'new Enquire',
+    //   text: text
+    // };
+    // mailgun.messages().send(data, (error, body) => {
+    //   console.log(body);
+    // });
   }
 
   render() {
