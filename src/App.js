@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Navibar from './components/layout/Navibar';
+import NavHeader from './components/layout/NavHeader';
 import Footer from './components/layout/Footer';
 import Landing from './components/layout/Landing';
 import Services from './components/layout/Services';
@@ -14,33 +14,13 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Navibar />
-          <Route
-            exact
-            path={process.env.PUBLIC_URL + '/'}
-            component={Landing}
-          />
+          <NavHeader />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing} />
           <div className="container">
-            <Route
-              exact
-              path={process.env.PUBLIC_URL + '/services'}
-              component={Services}
-            />
-            <Route
-              exact
-              path={process.env.PUBLIC_URL + '/testimonials'}
-              component={Testimonials}
-            />
-            <Route
-              exact
-              path={process.env.PUBLIC_URL + '/contact'}
-              component={Contact}
-            />
-            <Route
-              exact
-              path={process.env.PUBLIC_URL + '/aboutus'}
-              component={About}
-            />
+            <Route exact path={process.env.PUBLIC_URL + '/services'} component={Services} />
+            <Route exact path={process.env.PUBLIC_URL + '/testimonials'} component={Testimonials} />
+            <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
+            <Route exact path={process.env.PUBLIC_URL + '/aboutus'} component={About} />
           </div>
           <Footer />
         </div>

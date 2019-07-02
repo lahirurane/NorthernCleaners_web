@@ -140,11 +140,7 @@ export default class Enquire extends Component {
             </div>
             <div className="row">
               <div className="col-md-offset-5 col-md-2 ">
-                <input
-                  className="enquire-submit"
-                  type="submit"
-                  value="Submit"
-                />
+                <input className="enquire-submit" type="submit" value="Submit" />
               </div>
             </div>
           </form>

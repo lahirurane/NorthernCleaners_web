@@ -19,9 +19,9 @@ class Landing extends Component {
             </div>
             <div classNme="row">
               <div className="col-md-12 land-desc-desc">
-                For over 7 years Northern Cleaners have specialized in providing
-                professional cleaning services for commercial, industrial,
-                office, medical and building construction industries throughout
+                Our team will meet with you and get to know the cleaning expectations that needs to
+                be met. We will do a walk through together of the office site to obtain a good
+                understanding of the cleaning aspects.
               </div>
             </div>
           </div>
@@ -36,9 +36,9 @@ class Landing extends Component {
             </div>
             <div classNme="row">
               <div className="col-md-12 land-desc-desc">
-                For over 7 years Northern Cleaners have specialized in providing
-                professional cleaning services for commercial, industrial,
-                office, medical and building construction industries throughout
+                For over 7 years Northern Cleaners have specialized in providing professional
+                cleaning services for commercial, industrial, office, medical and building
+                construction industries throughout
               </div>
             </div>
           </div>
@@ -53,9 +53,9 @@ class Landing extends Component {
             </div>
             <div classNme="row">
               <div className="col-md-12 land-desc-desc">
-                For over 7 years Northern Cleaners have specialized in providing
-                professional cleaning services for commercial, industrial,
-                office, medical and building construction industries throughout
+                For over 7 years Northern Cleaners have specialized in providing professional
+                cleaning services for commercial, industrial, office, medical and building
+                construction industries throughout
               </div>
             </div>
           </div>
@@ -70,9 +70,10 @@ class Landing extends Component {
             </div>
             <div classNme="row">
               <div className="col-md-12 land-desc-desc">
-                For over 7 years Northern Cleaners have specialized in providing
-                professional cleaning services for commercial, industrial,
-                office, medical and building construction industries throughout
+                Northern Cleaners specialise in medical centre cleaning, currently cleaning 15
+                medical and dental clinics around Melbourne. Our team focus on hygiene, cross
+                contamination and disinfection to create safe environments for all medical staff and
+                patients
               </div>
             </div>
           </div>
@@ -80,9 +81,7 @@ class Landing extends Component {
         <div className="row">
           <div className="col-md-12">
             <div className="row ">
-              <div className="col-md-12 text-center professional-tag">
-                PROFESSIONAL
-              </div>
+              <div className="col-md-12 text-center professional-tag">PROFESSIONAL</div>
             </div>
             <div className="row">
               <div className="col-md-12 text-center professional-desc">
@@ -104,9 +103,9 @@ class Landing extends Component {
                 </div>
                 <div className="row">
                   <div className="col-md-12 testermo-desc">
-                    Northen Cleaning group works closely with us to full fill
-                    our cleaning requirements. I have no hesitation in
-                    recommending them for all your cleaning needs.
+                    Northen Cleaning group works closely with us to full fill our cleaning
+                    requirements. I have no hesitation in recommending them for all your cleaning
+                    needs.
                   </div>
                 </div>
               </div>
@@ -134,25 +133,19 @@ class Landing extends Component {
                       <div className="col-md-2 col-xs-2  cleaning-service-point-img">
                         <i className="fas fa-hand-point-right" />
                       </div>
-                      <div className="col-md-10 col-xs-10">
-                        General Cleaning
-                      </div>
+                      <div className="col-md-10 col-xs-10">General Cleaning</div>
                     </div>
                     <div className="row">
                       <div className="col-md-2 col-xs-2 cleaning-service-point-img">
                         <i className="fas fa-hand-point-right" />
                       </div>
-                      <div className="col-md-10 col-xs-10">
-                        Ground and Garden Maintenance{' '}
-                      </div>
+                      <div className="col-md-10 col-xs-10">Ground and Garden Maintenance </div>
                     </div>
                     <div className="row">
                       <div className="col-md-2 col-xs-2  cleaning-service-point-img">
                         <i className="fas fa-hand-point-right" />
                       </div>
-                      <div className="col-md-10 col-xs-10">
-                        Title and Grout Cleaning
-                      </div>
+                      <div className="col-md-10 col-xs-10">Title and Grout Cleaning</div>
                     </div>
                     <div className="row">
                       <div className="col-md-2 col-xs-2  cleaning-service-point-img">
@@ -174,18 +167,12 @@ class Landing extends Component {
             </div>
           </div>
           <div className="col-md-1" />
-          <div
-            style={{ paddingTop: '1em', paddingBottom: '1em' }}
-            className="col-md-3"
-          >
+          <div style={{ paddingTop: '1em', paddingBottom: '1em' }} className="col-md-3">
             <div className="row">
               <div className="col-md-12 desc-topic">LOCATIONS</div>
             </div>
             <div className="row">
-              <div className="col-md-12">
-                {' '}
-                Servicing all areas of Melbourne, Australia
-              </div>
+              <div className="col-md-12"> Servicing all areas of Melbourne, Australia</div>
             </div>
 
             <div className="row">

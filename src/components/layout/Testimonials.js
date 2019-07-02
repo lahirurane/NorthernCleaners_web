@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from './Carousel';
+import { Row, Col } from 'reactstrap';
 import testimonial1 from '../../images/testimonial1.jpg';
 import testimonial2 from '../../images/testimonial2.jpg';
 import testimonial3 from '../../images/testimonial3.jpg';
@@ -37,46 +38,43 @@ export default class Testimonials extends Component {
     return (
       <div className="">
         <Carousel />
-        <div className="row remove-margin">
-          <div className="about-us-row  col-12">
-            <div className="row remove-margin">
-              <div className="col-md-offset-1 col-md-10 intro-name">
-                Testimonials
-              </div>
-            </div>
-            <div className="row remove-margin">
-              <div className="col-md-offset-1 col-md-10">
-                Our services includes text
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div
-              style={{ paddingBottom: '2%', paddingTop: '2%' }}
-              className="row remove-margin"
-            >
+        <Row className="header-color intro-name m-0">Testimonials</Row>
+        <Row className="p-2 m-0">
+          <Col md="12">
+            <Row className="service-box pt-5">
               {testimonials.map(item => {
                 return (
-                  <div className="col-md-offset-1 col-md-10 ">
-                    <div className="row services-content-row ">
-                      <div className="col-md-6">
-                        <div className="row">
-                          <div className="service-title">{item.title}</div>
+                  <Col md="6" className="p-5">
+                    <Row>
+                      <Col md="2" xs="2" xm="2" className="pull-right">
+                        <div
+                          style={{
+                            height: '3em',
+                            width: '3em',
+                            borderRadius: '50px',
+                            backgroundColor: '#2f87a6',
+                            color: '#ffffff'
+                          }}
+                          className="item-center"
+                        >
+                          <i class="fas fa-user" />
                         </div>
-                        <div className="row">
-                          <div className="testimonial-desc">{item.desc}</div>
-                        </div>
-                      </div>
-                      <div className="col-md-6 service-img-col">
-                        <img className="service-img" src={item.img} />
-                      </div>
-                    </div>
-                  </div>
+                      </Col>
+                      <Col>
+                        <Row className="header-color pb-2 text-left">
+                          <Col>{item.title}</Col>
+                        </Row>
+                        <Row>
+                          <Col>{item.desc}</Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Col>
                 );
               })}
-            </div>
-          </div>
-        </div>
+            </Row>
+          </Col>
+        </Row>
       </div>
     );
   }
