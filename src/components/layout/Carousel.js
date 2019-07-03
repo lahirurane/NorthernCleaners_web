@@ -16,18 +16,21 @@ export default () => {
     { img: 'slider5', path: slider5 }
   ];
   return (
-    <Carousel>
-      {sliders.map(item => {
-        return (
-          <Carousel.Item>
-            <img alt="900x500" src={item.path} />
-            <Carousel.Caption>
-              {/* <h3>Clean</h3>
-    <p>Cleaning Test 1</p> */}
-            </Carousel.Caption>
-          </Carousel.Item>
-        );
-      })}
-    </Carousel>
+    <React.Fragment>
+      <div className="mobile-landing-page">
+        <img style={{ width: '100vw', height: '70vw' }} alt="mobile-landing" src={slider5} />
+      </div>
+      <Carousel>
+        {sliders.map(item => {
+          return (
+            <Carousel.Item>
+              <img style={{ width: '100vw', height: 'auto' }} alt="carousel-nc" src={item.path} />
+              <Carousel.Caption>{/* <h3>Clean</h3>
+    <p>Cleaning Test 1</p> */}</Carousel.Caption>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
+    </React.Fragment>
   );
 };

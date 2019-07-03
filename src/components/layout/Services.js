@@ -57,7 +57,6 @@ export default class Services extends Component {
   render() {
     return (
       <div className="">
-        <Carousel />
         <Row className="header-color intro-name m-0">Our Services</Row>
         <Row className="p-2 m-0">
           <Col md="12">
@@ -72,7 +71,7 @@ export default class Services extends Component {
             >
               Commercial Cleaning
             </Row>
-            <Row className="service-box pt-5">
+            <Row className="service-box">
               {CommercialCleaning.map(item => {
                 return (
                   <Col md="6" className="p-5">

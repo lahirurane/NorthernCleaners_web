@@ -8,13 +8,14 @@ import Testimonials from './components/layout/Testimonials';
 import Contact from './components/layout/Contact';
 import About from './components/layout/AboutUs';
 import './App.css';
-
+import Carousel from './components/layout/Carousel';
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
           <NavHeader />
+          <Carousel />
           <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing} />
           <div className="container">
             <Route exact path={process.env.PUBLIC_URL + '/services'} component={Services} />

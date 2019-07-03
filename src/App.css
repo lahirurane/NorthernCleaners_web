@@ -8,7 +8,7 @@
   font-style: italic;
 }
 .nav-call-us {
-  font-size: 2.5em;
+  font-size: 2em;
   color: #457393;
   font-weight: 600;
 }
@@ -108,8 +108,8 @@
 }
 
 .carousel-inner {
-  min-height: 20vw;
-  max-height: 25vw;
+  min-height: 30;
+  max-height: 35vw;
 }
 .carousel-inner img {
   width: 100%;
@@ -130,9 +130,9 @@
   padding-bottom: 2%;
 }
 .intro-name {
-  font-size: 2em;
-  padding-bottom: 2%;
-  padding-top: 2%;
+  font-size: 2.5em;
+  padding-bottom: 1.5em;
+  padding-top: 1.5em;
 }
 .navbar-default {
   border: none;
@@ -240,6 +240,15 @@
   margin-right: 2em;
   font-style: italic;
 }
+.text-theme-color {
+  color: #29465f;
+}
+.mobile-landing-page {
+  display: none;
+}
+.navbar .nav-bar-logo {
+  width: 15em;
+}
 @media only screen and (max-width: 600px) {
   body {
     font-size: 10px;
@@ -261,9 +270,28 @@
     min-height: none;
     max-height: none;
   }
+  .container .item-col {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+  }
+  .container .cleaning-services-col {
+    padding-left: 2em;
+  }
+  .intro-name {
+    font-size: 2.5em;
+    padding-bottom: 0.7em;
+    padding-top: 0.7em;
+  }
+  .navbar .nav-bar-logo {
+    width: 8em;
+  }
 }
 @media (max-width: 375px) {
   body {
     font-size: 8px;
+  }
+  .mobile-landing-page {
+    display: block;
   }
 }
