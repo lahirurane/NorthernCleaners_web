@@ -79,7 +79,7 @@ export default class LandingPage extends Component {
         >
           <Col
             style={{
-              backgroundColor: 'rgba(0,0,0, 0.7)',
+              backgroundColor: 'rgba(255,255,255, 0.7)',
               height: '100%'
             }}
           >
@@ -93,11 +93,11 @@ export default class LandingPage extends Component {
                 <Row className="item-center py-2">
                   <img style={{ width: '20%' }} src={logo} />
                 </Row>
-                <Row style={{ color: '#ffffff' }} className="item-center py-2">
-                  <h1>SOmething important with somethinf</h1>
+                <Row style={{ color: '#29465f' }} className="item-center py-2">
+                  <h1>Your Professional Cleaning Services</h1>
                 </Row>
-                <Row style={{ color: '#ffffff' }} className="item-center py-2">
-                  <h5>CLeaning slogan</h5>
+                <Row style={{ color: '#29465f' }} className="item-center py-2">
+                  <h5> For Affordable Price</h5>
                 </Row>
                 <Row className="item-center py-2">
                   <Button
