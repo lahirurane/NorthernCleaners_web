@@ -5,7 +5,7 @@ import { Row, Col } from 'reactstrap';
 export default class About extends Component {
   render() {
     return (
-      <div className="">
+      <div className="container">
         <Row className="m-0 p-2">
           <Col md="12">
             <Row>

@@ -4,7 +4,7 @@ import { Col, Row } from 'reactstrap';
 export default class Contact extends Component {
   render() {
     return (
-      <div className="">
+      <div className="container">
         <Row className="header-color intro-name m-0">Contact Us</Row>
         <Row className="p-2 py-4 m-0">
           <Col className="p-2" md="6">

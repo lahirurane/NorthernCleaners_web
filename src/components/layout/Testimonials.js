@@ -44,7 +44,7 @@ const testimonials = [
 export default class Testimonials extends Component {
   render() {
     return (
-      <div className="">
+      <div className="container">
         <Row className="header-color intro-name m-0">Testimonials</Row>
         <Row className="p-2 m-0">
           <Col md="12">

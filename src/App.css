@@ -249,6 +249,19 @@
 .navbar .nav-bar-logo {
   width: 15em;
 }
+.layout-page {
+  width: 100vw !important;
+  margin: 0 !important;
+}
+.layout-page .layout-page-block {
+  height: 100vh;
+}
+.layout-page .layout-title-block {
+  height: 30vh;
+}
+.layout-page .layout-content-block {
+  height: 70vh;
+}
 @media only screen and (max-width: 600px) {
   body {
     font-size: 10px;
@@ -293,5 +306,14 @@
   }
   .mobile-landing-page {
     display: block;
+  }
+  .layout-page .layout-page-block {
+    height: 100%;
+  }
+  .layout-page .layout-title-block {
+    height: 30%;
+  }
+  .layout-page .layout-content-block {
+    height: 70%;
   }
 }

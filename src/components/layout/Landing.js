@@ -7,7 +7,7 @@ import { Col, Row } from 'reactstrap';
 class Landing extends Component {
   render() {
     return (
-      <React.Fragment>
+      <React.Fragment className="container">
         <div className="row m-0">
           <div className="col-md-3 col-xs-6 land-desc-box land-desc-box-1">
             <div classNme="row">

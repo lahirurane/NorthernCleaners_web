@@ -56,7 +56,7 @@ const CarpetCleaning = [
 export default class Services extends Component {
   render() {
     return (
-      <div className="">
+      <div className="container">
         <Row className="header-color intro-name m-0">Our Services</Row>
         <Row className="p-2 m-0">
           <Col md="12">
