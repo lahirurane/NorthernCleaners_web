@@ -1,27 +1,31 @@
 self.__precacheManifest = [
   {
-    "revision": "8e9207ab78bc4a7980a8",
-    "url": "/NorthernCleaners_web/static/css/main.c52505b1.chunk.css"
+    "revision": "448b772a81b0fd446daf",
+    "url": "/NorthernCleaners_web/static/css/main.02b499d3.chunk.css"
   },
   {
-    "revision": "8e9207ab78bc4a7980a8",
-    "url": "/NorthernCleaners_web/static/js/main.21b13e3f.chunk.js"
+    "revision": "448b772a81b0fd446daf",
+    "url": "/NorthernCleaners_web/static/js/main.dbd03d6b.chunk.js"
   },
   {
     "revision": "7131df28569f0383fe38",
     "url": "/NorthernCleaners_web/static/js/runtime~main.75a1bce5.js"
   },
   {
-    "revision": "1db8fa02851240a7bea0",
+    "revision": "30675242429792facf02",
     "url": "/NorthernCleaners_web/static/css/2.588bb8a9.chunk.css"
   },
   {
-    "revision": "1db8fa02851240a7bea0",
-    "url": "/NorthernCleaners_web/static/js/2.0c029c81.chunk.js"
+    "revision": "30675242429792facf02",
+    "url": "/NorthernCleaners_web/static/js/2.e985d7a2.chunk.js"
   },
   {
     "revision": "7249bb466ae8e13ae8ba08db54d57ddf",
     "url": "/NorthernCleaners_web/static/media/slider1.7249bb46.jpg"
+  },
+  {
+    "revision": "b7fc192795c24123a8d42bb8c768af25",
+    "url": "/NorthernCleaners_web/static/media/logonc.b7fc1927.png"
   },
   {
     "revision": "73b3a7a6dca2abe5e0b2a14eba537dea",
@@ -44,10 +48,6 @@ self.__precacheManifest = [
     "url": "/NorthernCleaners_web/static/media/slider4.1a889e99.jpg"
   },
   {
-    "revision": "b7fc192795c24123a8d42bb8c768af25",
-    "url": "/NorthernCleaners_web/static/media/logonc.b7fc1927.png"
-  },
-  {
     "revision": "182ee449b0911811d928161f5d4139d1",
     "url": "/NorthernCleaners_web/static/media/slider6.182ee449.jpg"
   },
@@ -60,7 +60,15 @@ self.__precacheManifest = [
     "url": "/NorthernCleaners_web/static/media/testimonial2.a81cf9fe.jpg"
   },
   {
-    "revision": "564373a2a8cccc4e1c614adc8c9addfd",
+    "revision": "6eb5b5ae310497a84572abde25be6d7d",
+    "url": "/NorthernCleaners_web/static/media/slider7.6eb5b5ae.jpg"
+  },
+  {
+    "revision": "b56f0652210f8bae8d419f01e788f191",
+    "url": "/NorthernCleaners_web/static/media/locations.b56f0652.jpg"
+  },
+  {
+    "revision": "81257c693e38aca95e439a9d57925a6d",
     "url": "/NorthernCleaners_web/index.html"
   }
 ];
