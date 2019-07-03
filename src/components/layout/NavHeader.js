@@ -45,7 +45,7 @@ class NavHeader extends Component {
       //   </div>
       // </div>
       <Navbar className="sticky-top" color="light" light expand="md">
-        <NavbarBrand href="/" className="m-2">
+        <NavbarBrand href="/" className="pl-4 m-2">
           <img className="nav-bar-logo" alt="northern cleaners logo" src={logo} />
         </NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
