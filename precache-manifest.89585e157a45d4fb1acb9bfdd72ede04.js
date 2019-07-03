@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "9d89c5ebe6a8aa3dfa12",
-    "url": "/NorthernCleaners_web/static/css/main.52ca4ded.chunk.css"
+    "revision": "d5b54d540f86a4c4ed97",
+    "url": "/NorthernCleaners_web/static/css/main.a79a26a4.chunk.css"
   },
   {
-    "revision": "9d89c5ebe6a8aa3dfa12",
-    "url": "/NorthernCleaners_web/static/js/main.9672db32.chunk.js"
+    "revision": "d5b54d540f86a4c4ed97",
+    "url": "/NorthernCleaners_web/static/js/main.d3621fe8.chunk.js"
   },
   {
     "revision": "7131df28569f0383fe38",
     "url": "/NorthernCleaners_web/static/js/runtime~main.75a1bce5.js"
   },
   {
-    "revision": "a45a2ae70004b54ac1ae",
+    "revision": "d763c86e05277f6f8dd5",
     "url": "/NorthernCleaners_web/static/css/2.588bb8a9.chunk.css"
   },
   {
-    "revision": "a45a2ae70004b54ac1ae",
-    "url": "/NorthernCleaners_web/static/js/2.045a6318.chunk.js"
+    "revision": "d763c86e05277f6f8dd5",
+    "url": "/NorthernCleaners_web/static/js/2.7da854cc.chunk.js"
   },
   {
     "revision": "09b4a42af0b0a6710b072c55f61741f2",
@@ -44,6 +44,10 @@ self.__precacheManifest = [
     "url": "/NorthernCleaners_web/static/media/slider4.537119f8.jpg"
   },
   {
+    "revision": "b7fc192795c24123a8d42bb8c768af25",
+    "url": "/NorthernCleaners_web/static/media/logonc.b7fc1927.png"
+  },
+  {
     "revision": "ba11672bcfacc29f02ab29f474873e53",
     "url": "/NorthernCleaners_web/static/media/testimonial1.ba11672b.jpg"
   },
@@ -52,7 +56,7 @@ self.__precacheManifest = [
     "url": "/NorthernCleaners_web/static/media/testimonial2.a81cf9fe.jpg"
   },
   {
-    "revision": "59e3a2fb5019a1e36c623c74ae75f952",
+    "revision": "89c65ec3bdadd5b2ba5a77d16a9278f0",
     "url": "/NorthernCleaners_web/index.html"
   }
 ];
