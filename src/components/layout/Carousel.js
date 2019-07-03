@@ -6,6 +6,7 @@ import slider2 from '../../images/slider4.jpg';
 import slider3 from '../../images/slider3.jpg';
 import slider4 from '../../images/slider2.jpg';
 import slider5 from '../../images/slider1.jpg';
+import slider6 from '../../images/slider6.jpg';
 
 export default () => {
   const sliders = [
@@ -18,7 +19,7 @@ export default () => {
   return (
     <React.Fragment>
       <div className="mobile-landing-page">
-        <img style={{ width: '100vw', height: '70vw' }} alt="mobile-landing" src={slider5} />
+        <img style={{ width: '100vw', height: 'auto' }} alt="mobile-landing" src={slider6} />
       </div>
       <Carousel>
         {sliders.map(item => {

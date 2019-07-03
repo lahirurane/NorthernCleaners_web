@@ -289,7 +289,7 @@
 }
 @media (max-width: 375px) {
   body {
-    font-size: 8px;
+    font-size: 10px;
   }
   .mobile-landing-page {
     display: block;
