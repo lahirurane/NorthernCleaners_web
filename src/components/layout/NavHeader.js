@@ -26,7 +26,12 @@ class NavHeader extends Component {
   }
   render() {
     return (
-      <Navbar className="sticky-top" color="light" light expand="md">
+      <Navbar
+        style={{ backgroundColor: 'transparent' }}
+        className="sticky-top bg-transparent"
+        light
+        expand="md"
+      >
         <NavbarBrand href="/" className="pl-4 m-2">
           <img className="nav-bar-logo" alt="northern cleaners logo" src={logo} />
         </NavbarBrand>

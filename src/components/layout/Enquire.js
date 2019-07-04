@@ -51,7 +51,22 @@ export default class Enquire extends Component {
       '</th>' +
       '</tr>' +
       '</table>';
-    this.sendEmail(text);
+    // this.sendEmail(text);
+
+    const data = new FormData();
+    data.append('firstName', this.state.firstName);
+    data.append('lastName', this.state.lastName);
+    data.append('email', this.state.email);
+    data.append('mobile', this.state.mobile);
+    data.append('description', this.state.description);
+
+    fetch(
+      'https://script.google.com/macros/s/AKfycbxSMURwUwoEI7LoGuHMjHhuDNMnR9Pa_a0SNNKajG5x2k1XNags/exec',
+      {
+        method: 'POST',
+        body: data
+      }
+    );
     event.preventDefault();
   }
 
@@ -138,7 +153,7 @@ export default class Enquire extends Component {
                 </label>
               </div>
             </div>
-            <div className="row">
+            <div className="row item-center">
               <div className="col-md-offset-5 col-md-2 ">
                 <input className="enquire-submit" type="submit" value="Submit" />
               </div>

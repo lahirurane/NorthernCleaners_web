@@ -254,7 +254,14 @@
   margin: 0 !important;
 }
 .layout-page .layout-page-block {
-  height: 100vh;
+  height: 90vh;
+  min-height: 800px;
+}
+.testimonial-block {
+  height: 100vh !important;
+}
+.contact-block {
+  height: 120vh !important;
 }
 .layout-page .layout-title-block {
   height: 30vh;

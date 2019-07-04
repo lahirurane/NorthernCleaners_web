@@ -15,17 +15,17 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {/* <NavHeader />
-          <Carousel /> */}
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing} />
-          <div className="">
+          {/* <NavHeader /> */}
+          {/* <Carousel /> */}
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={LandingPage} />
+          {/* <div className="">
             <Route exact path={process.env.PUBLIC_URL + '/services'} component={Services} />
             <Route exact path={process.env.PUBLIC_URL + '/testimonials'} component={Testimonials} />
             <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
             <Route exact path={process.env.PUBLIC_URL + '/aboutus'} component={About} />
             <Route exact path={process.env.PUBLIC_URL + '/new'} component={LandingPage} />
-          </div>
-          {/* <Footer /> */}
+          </div> */}
+          <Footer />
         </div>
       </Router>
     );
