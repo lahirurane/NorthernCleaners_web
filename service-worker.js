@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/NorthernCleaners_web/precache-manifest.44d9a3a483dc01e0b75466e638c1e4ca.js"
+  "/NorthernCleaners_web/precache-manifest.7866f495e7bbe5e253bb91c1514ad204.js"
 );
 
 workbox.clientsClaim();
