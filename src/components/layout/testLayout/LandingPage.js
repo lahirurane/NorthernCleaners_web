@@ -34,7 +34,7 @@ const CommercialCleaning = [
     icon: 'fa-user-md'
   },
   {
-    title: 'Kindergarten & Childcare Cleaning',
+    title: 'Kindergarden & Childcare Cleaning',
 
     desc:
       'A safe and clean environment is expected by every parent when they drop off their children to a centre. Our team will make sure all surfaces, activity rooms, play areas, common areas, toilets are thoroughly cleaned and sanitised. Northern cleaners team will take the burden out of you in keeping the childcare / kindergarten in great health.',
@@ -81,13 +81,25 @@ const testimonials = [
 export default class LandingPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isOpen: false
+    };
+    this.toggle = this.toggle.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
 
     this.aboutus = React.createRef();
     this.ourservices = React.createRef();
     this.testimonials = React.createRef();
     this.contactus = React.createRef();
     this.mainPage = React.createRef();
+  }
+
+  componentDidMount() {
+    if (this.props.location && this.props.location.hash !== '') {
+      setTimeout(() => {
+        this.handleScroll(this.props.location.hash.replace('#/', ''));
+      }, 500);
+    }
   }
 
   handleScroll(type) {
@@ -124,17 +136,23 @@ export default class LandingPage extends Component {
         break;
     }
   }
+
+  toggle() {
+    this.setState({ isOpen: !this.state.isOpen });
+  }
+
   render() {
     return (
       <React.Fragment>
         <Navbar
-          style={{ backgroundColor: 'rgba(255,255,255, 0.7)', zIndex: '100' }}
+          style={{ backgroundColor: 'rgb(255, 255, 255,0.7)', filter: 'grayscale(100%)' }}
           className="sticky-top"
           light
           expand="md"
         >
           <NavbarBrand
             onClick={() => {
+              this.toggle();
               this.handleScroll('home');
             }}
             href={process.env.PUBLIC_URL}
@@ -149,6 +167,7 @@ export default class LandingPage extends Component {
               <NavItem>
                 <NavLink
                   onClick={() => {
+                    this.toggle();
                     this.handleScroll('aboutus');
                   }}
                   href={process.env.PUBLIC_URL + '#/aboutus'}
@@ -159,6 +178,7 @@ export default class LandingPage extends Component {
               <NavItem>
                 <NavLink
                   onClick={() => {
+                    this.toggle();
                     this.handleScroll('services');
                   }}
                   href={process.env.PUBLIC_URL + '#/services'}
@@ -169,6 +189,7 @@ export default class LandingPage extends Component {
               <NavItem>
                 <NavLink
                   onClick={() => {
+                    this.toggle();
                     this.handleScroll('testimonials');
                   }}
                   href={process.env.PUBLIC_URL + '#/testimonials'}
@@ -179,6 +200,7 @@ export default class LandingPage extends Component {
               <NavItem>
                 <NavLink
                   onClick={() => {
+                    this.toggle();
                     this.handleScroll('contact');
                   }}
                   href={process.env.PUBLIC_URL + '#/contact'}
@@ -190,13 +212,7 @@ export default class LandingPage extends Component {
           </Collapse>
         </Navbar>
         <Col md="12" className="layout-page">
-          <div
-            ref={this.mainPage}
-            style={{
-              background: 'url(' + Background + ')  no-repeat fixed 50% 0px / cover'
-            }}
-            className="layout-page-block header-block item-center row"
-          >
+          <div ref={this.mainPage} style={{}} className="header-block item-center row">
             <Col
               style={{
                 backgroundColor: 'rgba(255,255,255, 0.7)',
@@ -210,26 +226,17 @@ export default class LandingPage extends Component {
                 className="item-center"
               >
                 <Col>
-                  <Row className="item-center py-2">
-                    <img style={{ width: '20%' }} src={logo} />
+                  <Row className="item-center  py-2">
+                    <img className="header-block-logo" src={logo} />
                   </Row>
                   <Row style={{ color: '#29465f' }} className="item-center py-2">
                     <h1>Your Professional Cleaning Services</h1>
                   </Row>
-                  <Row style={{ color: '#29465f' }} className="item-center py-2">
+                  <Row style={{ color: '#29465f' }} className="item-center py-2 ">
                     <h5> For Affordable Price</h5>
                   </Row>
-                  <Row className="item-center py-2">
-                    <Button
-                      href={'tel:+610433076020'}
-                      style={{
-                        backgroundColor: '#29465f',
-                        borderColor: '#29465f',
-                        color: '#ffffff',
-                        borderRadius: '20px',
-                        width: '10em'
-                      }}
-                    >
+                  <Row className="item-center py-2 ">
+                    <Button className="btn-default" href={'tel:+610433076020'} style={{}}>
                       Call us now
                     </Button>
                   </Row>
@@ -243,17 +250,19 @@ export default class LandingPage extends Component {
             style={{ backgroundColor: '#ffffff' }}
             className="layout-page-block item-center row"
           >
-            <Col md="6" xs="12" xs="12">
+            <Col md="6" xs="12" xs="12" className="pt-5">
               <img style={{ width: '80%' }} src={logo} />
             </Col>
             <Col md="6" xs="12" xs="12">
-              <Row className="my-5">
-                <h2>About Us</h2>
+              <Row className="item-center py-5">
+                <div className="col-md-12">
+                  <h2>About Us</h2>
+                </div>
               </Row>
               <Row style={{ color: '#afafaf' }}>
-                <div className="col-md-offset-1 col-md-10 text-left">
+                <div className="col-md-12 px-5">
                   <div className="row ">
-                    <div className="col-md-12 text-justify py-2">
+                    <div className="col-md-12 text-justify py-4 ">
                       For over 7 years Northern Cleaners have specialized in providing professional
                       cleaning services for commercial, industrial, office, medical and building
                       construction industries throughout Melbourne. Our head office is located in
@@ -265,7 +274,7 @@ export default class LandingPage extends Component {
                   </div>
 
                   <div className="row ">
-                    <div className="col-md-12 text-justify py-2">
+                    <div className="col-md-12 text-justify py-4 ">
                       Our company has established strong relationships with clients for many years,
                       listening to their individual cleaning requirements to tailor-make a cleaning
                       solution perfectly suited to their specific needs.
@@ -273,14 +282,14 @@ export default class LandingPage extends Component {
                   </div>
 
                   <div className="row ">
-                    <div className="col-md-12 text-justify py-2">
+                    <div className="col-md-12 text-justify py-4 ">
                       Northern Cleaners are renowned for the highly trained staff who are selected
                       and screened through a thorough induction and training process.
                     </div>
                   </div>
 
                   <div className="row  pb-5">
-                    <div className="col-md-12 text-justify py-2">
+                    <div className="col-md-12 text-justify py-4 ">
                       We set high standards of cleaning using the modern equipment and approved
                       chemicals. We specialize in
                       <div className="row  pt-2">
@@ -342,20 +351,11 @@ export default class LandingPage extends Component {
             </Col>
           </div>
 
-          <Row
-            ref={this.locations}
-            style={{ backgroundColor: '#ffffff' }}
-            className="layout-page-block item-center"
-          >
+          <Row ref={this.locations} style={{ backgroundColor: '#ffffff' }} className="item-center">
             <Col style={{ height: '100%', padding: 0 }} md="6" xs="12" xs="12">
-              <div
-                style={{
-                  background: 'url(' + locations + ')  no-repeat fixed 50% 0px / cover',
-                  height: '100%'
-                }}
-              />
+              <div className="location-block " />
             </Col>
-            <Col className="pl-5" md="6" xs="12" xs="12">
+            <Col className="py-5" md="6" xs="12" xs="12">
               <Row className="py-5 item-center">
                 <h2>Locations</h2>
               </Row>
@@ -365,7 +365,10 @@ export default class LandingPage extends Component {
             </Col>
           </Row>
 
-          <Row style={{ backgroundColor: '#ffffff' }} className="layout-page-block item-center">
+          <Row
+            style={{ backgroundColor: '#ffffff' }}
+            className="layout-page-block item-center mt-5"
+          >
             <Col>
               <Row className="item-center layout-title-block py-5">
                 <h1>Our Pricing</h1>
@@ -373,9 +376,9 @@ export default class LandingPage extends Component {
               <Row className="layout-content-block">
                 {CommercialCleaning.map(item => {
                   return (
-                    <Col md="12" xm="12" xs="12" className="">
+                    <Col md="12" xm="12" xs="12" className="my-2">
                       <Row style={{ backgroundColor: '#efefef' }} className="item-center p-4 mx-5">
-                        <Col>
+                        <Col md="6" xs="12" xm="12">
                           <Row>
                             <Col>
                               <h4> {item.title} </h4>
@@ -391,12 +394,12 @@ export default class LandingPage extends Component {
                           </Row>
                         </Col>
 
-                        <Col style={{ color: '#afafaf' }}>
+                        <Col md="3" xs="12" xm="12" style={{ color: '#afafaf' }}>
                           <Row className="item-center">Feature 1</Row>
                           <Row className="item-center">Feature 2</Row>
                         </Col>
 
-                        <Col style={{ color: '#afafaf' }}>
+                        <Col md="3" xs="12" xm="12" style={{ color: '#afafaf' }}>
                           <Row className="item-center">Feature 3</Row>
                           <Row className="item-center">Feature 4</Row>
                         </Col>
@@ -420,18 +423,12 @@ export default class LandingPage extends Component {
               <Row className="item-center">
                 {testimonials.map(item => {
                   return (
-                    <Col
-                      style={{ minHeight: '20em', maxHeight: '20em' }}
-                      md="4"
-                      xm="12"
-                      xs="12"
-                      className="my-3 item-center"
-                    >
+                    <Col style={{}} md="4" xm="12" xs="12" className="my-3 py-2 item-center">
                       <div
                         style={{
                           position: 'absolute',
                           left: '47%',
-                          top: '1.5em',
+                          top: '-1.5em',
                           height: '3em',
                           width: '3em',
                           borderRadius: '50px',
@@ -442,23 +439,11 @@ export default class LandingPage extends Component {
                       >
                         <i className="fa fa-user" />
                       </div>
-                      <div
-                        style={{
-                          paddingTop: '2em',
-                          width: '100%',
-                          height: '100%',
-                          backgroundColor: '#efefef',
-                          color: '#afafaf',
-                          fontSize: '0.7em',
-                          minHeight: '20em',
-                          maxHeight: '20em'
-                        }}
-                        className="item-center p-5"
-                      >
+                      <div style={{}} className="item-center testimonial-container p-5">
                         <Col>
                           <Row
-                            style={{ minHeight: '10em', maxHeight: '1em' }}
-                            className="item-center"
+                            style={{}}
+                            className="item-center testimonial-comment-container text-justify"
                           >
                             <div>{item.desc}</div>
                           </Row>
@@ -486,7 +471,7 @@ export default class LandingPage extends Component {
           <div
             ref={this.contactus}
             style={{ backgroundColor: '#ffffff' }}
-            className="row layout-page-block item-center my-5 pt-5 contact-block "
+            className="row layout-page-block item-center my-5"
           >
             <Col>
               <Row className="item-center my-5 p-5">

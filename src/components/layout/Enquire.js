@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 // var API_KEY = 'acb0b40c-43ca387b';
 // var DOMAIN = 'http://northerncleaners.com.au/';
 // var mailgun = require('mailgun-js')({ apiKey: API_KEY, domain: DOMAIN });
@@ -11,7 +12,9 @@ export default class Enquire extends Component {
       lastName: '',
       email: '',
       mobile: '',
-      description: ''
+      description: '',
+      submitted: false,
+      isLoading: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -23,35 +26,7 @@ export default class Enquire extends Component {
   }
 
   handleSubmit(event) {
-    let text =
-      '<table class="tg"><tr>' +
-      '<th>First Name </th>' +
-      ' <th >' +
-      this.state.firstName +
-      '</th>' +
-      '</tr>' +
-      '<tr><th>Last Name </th>' +
-      ' <th >' +
-      this.state.lastName +
-      '</th>' +
-      '</tr>' +
-      '<tr><th>Email </th>' +
-      ' <th >' +
-      this.state.email +
-      '</th>' +
-      '</tr>' +
-      '<tr><th>Mobile</th>' +
-      ' <th >' +
-      this.state.mobile +
-      '</th>' +
-      '</tr>' +
-      '<tr><th>Description :  </th>' +
-      ' <th >' +
-      this.state.description +
-      '</th>' +
-      '</tr>' +
-      '</table>';
-    // this.sendEmail(text);
+    this.setState({ isLoading: true });
 
     const data = new FormData();
     data.append('firstName', this.state.firstName);
@@ -66,7 +41,9 @@ export default class Enquire extends Component {
         method: 'POST',
         body: data
       }
-    );
+    ).then(data => {
+      this.setState({ submitted: true, isLoading: false });
+    });
     event.preventDefault();
   }
 
@@ -155,7 +132,26 @@ export default class Enquire extends Component {
             </div>
             <div className="row item-center">
               <div className="col-md-offset-5 col-md-2 ">
-                <input className="enquire-submit" type="submit" value="Submit" />
+                <Button
+                  className="btn-default"
+                  type="submit"
+                  disabled={this.state.submitted}
+                  value="Submit"
+                >
+                  {this.state.isLoading
+                    ? 'Submitting...'
+                    : this.state.submitted
+                    ? 'Successfully Submitted'
+                    : 'Submit'}
+                </Button>
+                {/* <input
+                  className="enquire-submit"
+                  type="submit"
+                  disable={this.state.submitted}
+                  value="Submit"
+                >
+                
+                </input> */}
               </div>
             </div>
           </form>
