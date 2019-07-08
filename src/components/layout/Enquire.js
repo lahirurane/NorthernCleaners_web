@@ -53,7 +53,7 @@ export default class Enquire extends Component {
     data.append('description', this.state.description);
 
     fetch(
-      'https://script.google.com/macros/s/AKfycbxSMURwUwoEI7LoGuHMjHhuDNMnR9Pa_a0SNNKajG5x2k1XNags/exec',
+      'https://script.google.com/macros/s/AKfycbz_njZ_FgYDz5QZaanOQBrogWZuanLcNN03CFwF9g/exec',
       {
         method: 'POST',
         body: data

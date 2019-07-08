@@ -15,8 +15,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Route exact path={process.env.PUBLIC_URL + '/'} component={LandingPage} />
-          <Route component={LandingPage} push={true} />
+          <Route path={process.env.PUBLIC_URL + '/'} component={LandingPage} />
           <Footer />
         </div>
       </Router>

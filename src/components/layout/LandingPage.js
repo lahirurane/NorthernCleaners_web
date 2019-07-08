@@ -346,9 +346,9 @@ export default class LandingPage extends Component {
                 <h1>Our Services</h1>
               </Row>
               <Row className="layout-content-block ">
-                {CommercialCleaning.map(item => {
+                {CommercialCleaning.map((item, index) => {
                   return (
-                    <Col style={{ padding: '5em' }} md="4" xm="12" xs="12" className="">
+                    <Col key={index} style={{ padding: '5em' }} md="4" xm="12" xs="12" className="">
                       <Row
                         className="item-center py-4"
                         style={{ fontSize: '2.75rem', color: '#29465f' }}
