@@ -394,9 +394,9 @@ export default class LandingPage extends Component {
                 <h1>Our Pricing</h1>
               </Row>
               <Row className="layout-content-block">
-                {CommercialCleaning.map(item => {
+                {CommercialCleaning.map((item, index) => {
                   return (
-                    <Col md="12" xm="12" xs="12" className="my-2">
+                    <Col key={index} md="12" xm="12" xs="12" className="my-2">
                       <Row style={{ backgroundColor: '#efefef' }} className="item-center p-4 mx-5">
                         <Col md="6" xs="12" xm="12">
                           <Row>
@@ -441,9 +441,9 @@ export default class LandingPage extends Component {
                 <h1>What Our Clients Say</h1>
               </Row>
               <Row className="item-center">
-                {testimonials.map(item => {
+                {testimonials.map((item, index) => {
                   return (
-                    <Col style={{}} md="4" xm="12" xs="12" className="my-3 py-2 item-center">
+                    <Col key={index} md="4" xm="12" xs="12" className="my-3 py-2 item-center">
                       <div
                         style={{
                           position: 'absolute',
