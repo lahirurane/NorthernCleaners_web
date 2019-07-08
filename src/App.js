@@ -1,30 +1,22 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavHeader from './components/layout/NavHeader';
 import Footer from './components/layout/Footer';
-import Landing from './components/layout/Landing';
-import Services from './components/layout/Services';
-import Testimonials from './components/layout/Testimonials';
-import Contact from './components/layout/Contact';
-import About from './components/layout/AboutUs';
-import LandingPage from './components/layout/testLayout/LandingPage';
+import LandingPage from './components/layout/LandingPage';
 import './App.css';
-import Carousel from './components/layout/Carousel';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-143468928-1', {
+  debug: false,
+  titleCase: false
+});
+
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          {/* <NavHeader /> */}
-          {/* <Carousel /> */}
           <Route exact path={process.env.PUBLIC_URL + '/'} component={LandingPage} />
-          {/* <div className="">
-            <Route exact path={process.env.PUBLIC_URL + '/services'} component={Services} />
-            <Route exact path={process.env.PUBLIC_URL + '/testimonials'} component={Testimonials} />
-            <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact} />
-            <Route exact path={process.env.PUBLIC_URL + '/aboutus'} component={About} />
-            <Route exact path={process.env.PUBLIC_URL + '/new'} component={LandingPage} />
-          </div> */}
+          <Route component={LandingPage} push={true} />
           <Footer />
         </div>
       </Router>

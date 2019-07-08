@@ -11,10 +11,9 @@ import {
   Collapse,
   NavLink
 } from 'reactstrap';
-import logo from '../.././../images/logonc.png';
-import Background from '../.././../images/slider7.jpg';
-import locations from '../.././../images/locations.jpg';
-import Enquire from '../Enquire';
+import logo from '../../images/logonc.png';
+import Enquire from './Enquire';
+import ReactGA from 'react-ga';
 
 const CommercialCleaning = [
   {
@@ -109,31 +108,41 @@ export default class LandingPage extends Component {
           behavior: 'smooth',
           block: 'start'
         });
+        this.setGAEvent('navigation', 'aboutus');
         break;
       case 'contact':
         this.contactus.current.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
+        this.setGAEvent('navigation', 'contact');
         break;
       case 'services':
         this.ourservices.current.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
+        this.setGAEvent('navigation', 'services');
         break;
       case 'testimonials':
         this.testimonials.current.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
+        this.setGAEvent('navigation', 'testimonials');
         break;
       case 'home':
         this.mainPage.current.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
+        this.setGAEvent('navigation', 'home');
         break;
+      default:
+        this.mainPage.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
     }
   }
 
@@ -141,6 +150,13 @@ export default class LandingPage extends Component {
     this.setState({ isOpen: !this.state.isOpen });
   }
 
+  setGAEvent(category, action) {
+    const gaData = {
+      category: category,
+      action: action
+    };
+    ReactGA.event(gaData);
+  }
   render() {
     return (
       <React.Fragment>
@@ -227,7 +243,11 @@ export default class LandingPage extends Component {
               >
                 <Col>
                   <Row className="item-center  py-2">
-                    <img className="header-block-logo" src={logo} />
+                    <img
+                      alt={'northern cleaners melbourne'}
+                      className="header-block-logo"
+                      src={logo}
+                    />
                   </Row>
                   <Row style={{ color: '#29465f' }} className="item-center py-2">
                     <h1>Your Professional Cleaning Services</h1>
@@ -250,10 +270,10 @@ export default class LandingPage extends Component {
             style={{ backgroundColor: '#ffffff' }}
             className="layout-page-block item-center row"
           >
-            <Col md="6" xs="12" xs="12" className="pt-5">
-              <img style={{ width: '80%' }} src={logo} />
+            <Col md="6" xs="12" xm="12" className="pt-5">
+              <img alt={'northen cleaners melbourne'} style={{ width: '80%' }} src={logo} />
             </Col>
-            <Col md="6" xs="12" xs="12">
+            <Col md="6" xs="12" xm="12">
               <Row className="item-center py-5">
                 <div className="col-md-12">
                   <h2>About Us</h2>
@@ -352,10 +372,10 @@ export default class LandingPage extends Component {
           </div>
 
           <Row ref={this.locations} style={{ backgroundColor: '#ffffff' }} className="item-center">
-            <Col style={{ height: '100%', padding: 0 }} md="6" xs="12" xs="12">
+            <Col style={{ height: '100%', padding: 0 }} md="6" xm="12" xs="12">
               <div className="location-block " />
             </Col>
-            <Col className="py-5" md="6" xs="12" xs="12">
+            <Col className="py-5" md="6" xm="12" xs="12">
               <Row className="py-5 item-center">
                 <h2>Locations</h2>
               </Row>

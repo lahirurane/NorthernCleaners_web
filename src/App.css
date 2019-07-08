@@ -304,6 +304,10 @@ body {
 .header-block .header-block-logo {
   width: 20%;
 }
+.invalid-feedback {
+  color: #cf000f !important;
+  font-size: 0.9em !important;
+}
 @media only screen and (max-width: 600px) {
   body {
     font-size: 10px;
