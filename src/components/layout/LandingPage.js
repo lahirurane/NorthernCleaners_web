@@ -283,21 +283,21 @@ export default class LandingPage extends Component {
                 <div className="col-md-12 px-5">
                   <div className="row ">
                     <div className="col-md-12 text-justify py-4 ">
-                      For over 7 years Northern Cleaners have specialized in providing professional
-                      cleaning services for commercial, industrial, office, medical and building
-                      construction industries throughout Melbourne. Our head office is located in
-                      Northern suburbs as well as many of the key clientele. Northern Cleaners
-                      provide genuine & quality cleaning services that strive to meet and exceed
-                      your expectations. We offer reasonable pricing and follow all relevant Modern
-                      Awards.
+                      For over seven years Northern Cleaners have specialised in providing
+                      professional cleaning services for commercial, industrial, office, medical and
+                      building construction industries throughout Melbourne. Our head office is
+                      located in Northern suburbs as well as many of the key clientele. Northern
+                      Cleaners provide genuine & quality cleaning services that strive to meet and
+                      exceed your expectations. We offer reasonable pricing and follow all relevant
+                      Modern Awards.
                     </div>
                   </div>
 
                   <div className="row ">
                     <div className="col-md-12 text-justify py-4 ">
                       Our company has established strong relationships with clients for many years,
-                      listening to their individual cleaning requirements to tailor-make a cleaning
-                      solution perfectly suited to their specific needs.
+                      listening to their cleaning requirements to tailor-make a cleaning solution
+                      perfectly suited to their specific needs.
                     </div>
                   </div>
 
@@ -310,8 +310,8 @@ export default class LandingPage extends Component {
 
                   <div className="row  pb-5">
                     <div className="col-md-12 text-justify py-4 ">
-                      We set high standards of cleaning using the modern equipment and approved
-                      chemicals. We specialize in
+                      We set high standards of cleaning, using modern equipment and approved
+                      chemicals. We specialise in
                       <div className="row  pt-2">
                         <div className="col-md-offset-1 col-md-11">
                           &nbsp;&nbsp;- Disinfection of clinical & non-clinical areas
@@ -319,7 +319,7 @@ export default class LandingPage extends Component {
                       </div>
                       <div className="row ">
                         <div className="col-md-offset-1 col-md-11">
-                          &nbsp;&nbsp;- Attention to detail on all work spaces
+                          &nbsp;&nbsp;- Attention to detail on all workspaces
                         </div>
                       </div>
                       <div className="row  pb-2">
