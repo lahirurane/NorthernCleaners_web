@@ -385,7 +385,7 @@ export default class LandingPage extends Component {
             </Col>
           </Row>
 
-          <Row
+          {/* <Row
             style={{ backgroundColor: '#ffffff' }}
             className="layout-page-block item-center mt-5"
           >
@@ -429,7 +429,7 @@ export default class LandingPage extends Component {
                 })}
               </Row>
             </Col>
-          </Row>
+          </Row> */}
 
           <div
             ref={this.testimonials}
