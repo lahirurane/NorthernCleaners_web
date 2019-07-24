@@ -168,7 +168,8 @@ body {
 }
 
 .enquire-content {
-  background-color: #2f87a6;
+  background-color: #29465f;
+
   color: #ffffff;
   padding: 1em;
 }
@@ -176,7 +177,6 @@ body {
   font-size: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
-  font-style: italic;
 }
 .enquire-content label {
   width: 100%;
@@ -200,9 +200,10 @@ body {
   color: #444444;
 }
 .enquire-submit {
-  background-color: #29465f;
+  background-color: #2f87a6;
   color: #ffffff !important;
-
+  border-radius: 20px !important;
+  width: 10em !important;
   margin-bottom: 2em;
   border: 1px solid #ffffff !important;
 }
@@ -262,7 +263,7 @@ body {
   min-height: 100vh;
 }
 .layout-page .header-block {
-  height: 90vh;
+  height: 100vh;
   min-height: 800px;
   background: url('./images/slider7.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -307,6 +308,71 @@ body {
 .invalid-feedback {
   color: #cf000f !important;
   font-size: 0.9em !important;
+}
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #444444;
+  border-right: 2px solid #444444;
+  z-index: 9;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation: fade_move_down 4s ease-in-out infinite;
+  animation: fade_move_down 4s ease-in-out infinite;
+}
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+@-moz-keyframes fade_move_down {
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
+}
+@keyframes fade_move_down {
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 @media only screen and (max-width: 600px) {
   body {
@@ -369,6 +435,9 @@ body {
   }
   .header-block .header-block-logo {
     width: 50%;
+  }
+  .scroll-down {
+    display: none;
   }
 }
 @media (max-width: 375px) {

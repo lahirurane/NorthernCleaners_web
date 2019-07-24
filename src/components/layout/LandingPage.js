@@ -161,7 +161,12 @@ export default class LandingPage extends Component {
     return (
       <React.Fragment>
         <Navbar
-          style={{ backgroundColor: 'rgb(255, 255, 255,0.7)', filter: 'grayscale(100%)' }}
+          style={{
+            backgroundColor: 'rgb(255, 255, 255,0.7)',
+            filter: 'grayscale(100%)',
+            position: 'fixed',
+            width: '100%'
+          }}
           className="sticky-top"
           light
           expand="md"
@@ -171,8 +176,8 @@ export default class LandingPage extends Component {
               this.toggle();
               this.handleScroll('home');
             }}
-            href={process.env.PUBLIC_URL}
-            className="pl-4 m-2"
+            href={process.env.PUBLIC_URL + '#/'}
+            className="pl-2 m-2"
           >
             <img className="nav-bar-logo" alt="northern cleaners logo" src={logo} />
           </NavbarBrand>
@@ -231,13 +236,13 @@ export default class LandingPage extends Component {
           <div ref={this.mainPage} style={{}} className="header-block item-center row">
             <Col
               style={{
-                backgroundColor: 'rgba(255,255,255, 0.7)',
+                backgroundColor: 'rgba(255,255,255, 0.5)',
                 height: '100%'
               }}
             >
               <Row
                 style={{
-                  height: '100%'
+                  height: '95%'
                 }}
                 className="item-center"
               >
@@ -261,6 +266,14 @@ export default class LandingPage extends Component {
                     </Button>
                   </Row>
                 </Col>
+              </Row>
+              <Row
+                style={{
+                  height: '5%'
+                }}
+                className="item-center"
+              >
+                <div class="scroll-down" />
               </Row>
             </Col>
           </div>
@@ -491,7 +504,7 @@ export default class LandingPage extends Component {
           <div
             ref={this.contactus}
             style={{ backgroundColor: '#ffffff' }}
-            className="row layout-page-block item-center my-5"
+            className="row layout-page-block item-center my-1"
           >
             <Col>
               <Row className="item-center my-5 p-5">

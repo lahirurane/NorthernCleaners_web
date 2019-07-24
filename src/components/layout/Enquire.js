@@ -230,7 +230,7 @@ export default class Enquire extends Component {
             <div className="row item-center">
               <div className="col-md-offset-5 col-md-2 ">
                 <Button
-                  className="btn-default"
+                  className="enquire-submit"
                   type="submit"
                   disabled={this.state.submitted}
                   value="Submit"
